@@ -44,13 +44,13 @@ client.on("ready", (msg) => {
                     channel.send('[' + Message.time + ' | Chat]' + '<' + Message.player + '>' + Message.message);
                     break;
                 case 'PlayerDie':
-                    channel.send('[' + Message.time + ' | 死亡]' + '玩家 **' + Message.DiePlayer + '** 被 ' + '**' + Message.KillBy + ' **殺死了')
+                    channel.send('[' + Message.time + '|Death]' + 'Player**' + Message.DiePlayer + '** was' + '**Killed by**' + Message.KillBy + '**')
                     break;
                 case 'serverstart':
                     channel.send("Server Open")
                     break;
                 case 'PlayerSuicide':
-                    channel.send('`[' + Message.time + ' | 玩家非正常死亡]' + '玩家 ' + Message.player + Message.randomtext + '`')
+                    channel.send('`[' + Message.time + ' | player died]' + 'Player' + Message.player + Message.randomtext + '`')
                     break;
                 case 'PlayerJoin':
                     channel.send('`[' + Message.time + ' | Player Join]' + 'Player ' + Message.JoinPlayer + 'Join`')
