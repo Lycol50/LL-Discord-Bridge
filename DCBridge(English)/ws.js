@@ -13,7 +13,7 @@ function connectionStauts() {
     switch (WS.status) {
         case 0:
             {
-                logger.info('WebSocket 連接成功!');
+                logger.info('WebSocket connection successful!');
                 let type = 'serverstart'
                 let time = system.getTimeStr();
 
@@ -130,7 +130,7 @@ if (PlayerDie == true) {
             let type = 'PlayerSuicide'
             player = pl.realName;
 
-            var Text = ['莫名其妙死掉了', '憑空消失了', '被服主拿草打死了', '被空氣殺死了', '被上天制裁!', '不想活了!', '使用神秘的力量而死亡', '無緣無故地走掉了......', '安詳的走了'];
+            var Text = ['Died inexplicably', 'disappeared out of thin air', 'Killed by the air', 'Sanctioned by heaven!' , 'Dont want to live!' , 'Died using mysterious power', 'Walked away for no reason...', 'Gone peacefully'];
             var rand = Math.random();
             var randomtext = Text[Math.floor(Math.random() * Text.length)]
 
@@ -183,14 +183,3 @@ WS.listen('onTextReceived', function(msg) {
             break;
     }
 });
-
-logger.info('==============插件資訊==============')
-logger.info('DC對話橋啟動')
-logger.info('==============插件原創==============')
-logger.info("原創:RestudyXD")
-logger.info("原創Discord:Patreon#4956")
-logger.info('==============插件改版==============')
-logger.info('改版:杯子小samilcup')
-logger.info('改版者github:omscsamilcup')
-logger.info('改版者Discord:杯子小samilcup#0001')
-logger.info('====================================')
